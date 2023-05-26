@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/Users/ekshore/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["minimap.vim"] = {
+    loaded = true,
+    path = "/Users/ekshore/.local/share/nvim/site/pack/packer/start/minimap.vim",
+    url = "https://github.com/wfxr/minimap.vim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/ekshore/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -118,6 +123,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ekshore/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-treesitter-context"] = {
+    loaded = true,
+    path = "/Users/ekshore/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
   },
   ["onedark.nvim"] = {
     loaded = true,
@@ -144,6 +154,12 @@ _G.packer_plugins = {
     path = "/Users/ekshore/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["trailing-whitespace"] = {
+    config = { "\27LJ\2\n¥\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\fpalette\1\0\1\rmarkdown\14RosyBrown\rpatterns\1\0\1\18default_color\18PaleVioletRed\1\2\0\0\n\\s\\+$\nsetup\24trailing-whitespace\frequire\0" },
+    loaded = true,
+    path = "/Users/ekshore/.local/share/nvim/site/pack/packer/start/trailing-whitespace",
+    url = "https://github.com/lukoshkin/trailing-whitespace"
+  },
   undotree = {
     loaded = true,
     path = "/Users/ekshore/.local/share/nvim/site/pack/packer/start/undotree",
@@ -157,6 +173,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: trailing-whitespace
+time([[Config for trailing-whitespace]], true)
+try_loadstring("\27LJ\2\n¥\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\fpalette\1\0\1\rmarkdown\14RosyBrown\rpatterns\1\0\1\18default_color\18PaleVioletRed\1\2\0\0\n\\s\\+$\nsetup\24trailing-whitespace\frequire\0", "config", "trailing-whitespace")
+time([[Config for trailing-whitespace]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

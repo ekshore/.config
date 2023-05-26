@@ -17,6 +17,11 @@ vim.keymap.set('x', '<leader>p', '\"_dP')
 vim.keymap.set('n', '<leader>d', '\"_dP')
 vim.keymap.set('v', '<leader>d', '\"_dP')
 
+-- Copy into my clipboard
+vim.keymap.set('n', '<leader>y', '\"+y')
+vim.keymap.set('v', '<leader>y', '\"+y')
+vim.keymap.set('n', '<leader>Y', '\"+Y')
+
 -- escape is out of the way
 vim.keymap.set('i', 'jk', '<Esc>')
 
