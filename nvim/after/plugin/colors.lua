@@ -12,7 +12,7 @@ function setColor(color)
 		highlights = {
 		}
 	}
-	color = color or 'onedark'
+	color = color or 'gruvbox'
 	vim.cmd.colorscheme(color)
 
 end
