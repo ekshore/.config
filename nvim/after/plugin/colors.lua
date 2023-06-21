@@ -1,20 +1,46 @@
-
 local onedark = require('onedark')
+local gruvbox = require('gruvbox')
+
 function setColor(color)
-	onedark.setup {
-		style = 'darker',
-		transparent = true,
+    onedark.setup {
+        style = 'darker',
+        transparent = true,
 
-		code_style = {
-			comments = 'italic'
-		},
+        code_style = {
+            comments = 'italic'
+        },
 
-		highlights = {
-		}
-	}
-	color = color or 'gruvbox'
-	vim.cmd.colorscheme(color)
+        highlights = {
+        }
+    }
 
+    -- setup must be called before loading the colorscheme
+    -- Default options:
+    gruvbox.setup({
+        undercurl = true,
+        underline = true,
+        bold = true,
+        italic = {
+            strings = true,
+            comments = true,
+            operators = false,
+            folds = true,
+        },
+        strikethrough = true,
+        invert_selection = false,
+        invert_signs = false,
+        invert_tabline = false,
+        invert_intend_guides = false,
+        inverse = true, -- invert background for search, diffs, statuslines and errors
+        contrast = "",  -- can be "hard", "soft" or empty string
+        palette_overrides = {},
+        overrides = {},
+        dim_inactive = false,
+        transparent_mode = true,
+    })
+
+    color = color or 'gruvbox'
+    vim.cmd.colorscheme(color)
 end
 
 setColor()
