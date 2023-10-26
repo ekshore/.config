@@ -1,1 +1,2 @@
-require('ekshore')
+require('ekshore.core')
+require('ekshore.lazy')
