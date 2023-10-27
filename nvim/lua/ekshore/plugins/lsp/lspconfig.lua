@@ -36,7 +36,7 @@ return {
             -- keymap.set('n', '<leader>vws', function() vim.lsp.buf.workspace_symbol() end, opts)
 
             opts.desc = 'Show diagnostics for file'
-            keymap.set('n', '<leader>D', '<cdm>Telescope diagnostics bufner=0<CR>', opts)
+            keymap.set('n', '<leader>D', ':Telescope diagnostics bufner=0<CR>', opts)
 
             opts.desc = 'Show diagnositcs for line'
             keymap.set('n', '<leader>d', vim.diagnostic.open_float, opts)
