@@ -15,13 +15,13 @@ return {
             opts.buffer = bufnr
 
             opts.desc = 'Show LSP implementations'
-            keymap.set('n', 'gi', '<cmd>Telescope lsp_references<CR>', opts)
+            keymap.set('n', 'gi', ':Telescope lsp_references<CR>', opts)
 
             -- opts.desc = ''
             -- keymap.set('n', '<leader>vrr', vim.lsp.buf.references, opts)
 
             opts.desc = 'Show LSP definitions'
-            keymap.set('n', 'gd', '<cmp>Telescope lsp_definitinos<CR>', opts)
+            keymap.set('n', 'gd', ':Telescope lsp_definitinos<CR>', opts)
 
             -- opts.desc = 'Go to definition'
             -- keymap.set('n', 'gD', function() vim.lsp.buf.definition() end, opts)
@@ -30,7 +30,7 @@ return {
             keymap.set('n', 'gD', function() vim.lsp.buf.declaration() end, opts)
 
             opts.desc = 'Show LSP type definitions'
-            keymap.set('n', 'gi', '<cmd>Telescope lsp_type_definitions<CR>', opts)
+            keymap.set('n', 'gt', ':Telescope lsp_type_definitions<CR>', opts)
 
             -- opts.desc = ''
             -- keymap.set('n', '<leader>vws', function() vim.lsp.buf.workspace_symbol() end, opts)
