@@ -21,7 +21,7 @@ return {
             -- keymap.set('n', '<leader>vrr', vim.lsp.buf.references, opts)
 
             opts.desc = 'Show LSP definitions'
-            keymap.set('n', 'gd', ':Telescope lsp_definitinos<CR>', opts)
+            keymap.set('n', 'gd', ':Telescope lsp_definitions<CR>', opts)
 
             -- opts.desc = 'Go to definition'
             -- keymap.set('n', 'gD', function() vim.lsp.buf.definition() end, opts)
@@ -65,7 +65,8 @@ return {
 
         local capabilities = cmp_nvim_lsp.default_capabilities()
 
-        local icons = { Error = 'E', Warn = 'W', Hint = 'H', Info = 'I' }
+        -- local icons = { Error = 'E', Warn = 'W', Hint = 'H', Info = 'I' }
+        local icons = { Error = ' ', Warn = ' ', Hint = '󰠠 ', Info = ' ' }
         for type, icon in pairs(icons) do
             local hl = 'DiagnosticSign' .. type
             vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = '' })
