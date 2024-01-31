@@ -3,8 +3,10 @@ return {
     event = { 'BufReadPre', 'BufNewFile' },
     dependencies = {
         'hrsh7th/cmp-nvim-lsp',
+        'j-hui/fidget.nvim',
     },
     config = function()
+        require('fidget').setup()
         local lspconfig = require('lspconfig')
         local cmp_nvim_lsp = require('cmp_nvim_lsp')
 
@@ -80,12 +82,38 @@ return {
             capabilities = capabilities,
             on_attach = on_attach,
             cmd = {
-                'rustup', 'run', 'stable', 'rust-analyzer',
+                'rustup', 'run', 'stable', 'rust-analyzer'
+            },
+            settings = {
+                ['rust-analyzer'] = {
+                    cargo = {
+                        features = { 'ssr' },
+                    },
+                    procMacro = {
+                        ignored = {
+                            leptos_macros = {
+                                "server",
+                            }
+                        }
+                    }
+                }
             }
+        })
+
+        -- configure Dockerfile language server
+        lspconfig['dockerls'].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
         })
 
         -- configure typescript server
         lspconfig['tsserver'].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+        })
+
+        -- configure html
+        lspconfig['html'].setup({
             capabilities = capabilities,
             on_attach = on_attach,
         })
