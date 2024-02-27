@@ -3,3 +3,4 @@ nvim/plugin/packer_compiled.lua
 nvim/ftplugin/
 pip/
 tmux/plugins
+neofetch/
