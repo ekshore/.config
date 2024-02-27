@@ -86,9 +86,9 @@ return {
             },
             settings = {
                 ['rust-analyzer'] = {
-                    cargo = {
-                        features = { 'ssr' },
-                    },
+                    -- cargo = {
+                    --     features = { 'ssr' },
+                    -- },
                     procMacro = {
                         ignored = {
                             leptos_macros = {
