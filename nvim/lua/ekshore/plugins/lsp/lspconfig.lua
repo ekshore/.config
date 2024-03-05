@@ -106,6 +106,12 @@ return {
             on_attach = on_attach,
         })
 
+        -- configure json server
+        lspconfig['jsonls'].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+        })
+
         -- configure typescript server
         lspconfig['tsserver'].setup({
             capabilities = capabilities,
