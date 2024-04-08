@@ -14,11 +14,12 @@ return {
 
         vim.keymap.set('n', '<leader>pf', builtin.find_files, { desc = 'Fuzzy find files in cwd' })
         vim.keymap.set('n', '<C-p>', builtin.git_files, { desc = 'Fuzzy find files in git' })
-        vim.keymap.set('n', '<leader>ps', function() 
+        vim.keymap.set('n', '<leader>ps', function()
 	        builtin.grep_string( { search = vim.fn.input('Grep > ') })
         end, { desc = 'grep search project' })
 
         vim.keymap.set('n', '<leader>gh', builtin.git_commits, { desc = 'View git commits' })
+        vim.keymap.set('n', '<leader>?', builtin.help_tags, { desc = 'Search help' })
 
         telescope.load_extension('fzf')
     end,
