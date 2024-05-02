@@ -21,9 +21,11 @@ return {
             ensure_installed = {
                 'lua_ls',
                 'tsserver',
-                'html',
+                'html-lsp',
                 'cssls',
-                'tailwindcss'
+                'tailwindcss',
+                'jsonls',
+                'dockerls',
             },
             automatic_installation = true,
         })

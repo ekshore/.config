@@ -19,7 +19,10 @@ return {
         end, { desc = 'grep search project' })
 
         vim.keymap.set('n', '<leader>gh', builtin.git_commits, { desc = 'View git commits' })
+
+        -- Search help
         vim.keymap.set('n', '<leader>?', builtin.help_tags, { desc = 'Search help' })
+        vim.keymap.set('n', '<leader>m?', builtin.man_pages, { desc = 'Search man pages' })
 
         telescope.load_extension('fzf')
     end,
