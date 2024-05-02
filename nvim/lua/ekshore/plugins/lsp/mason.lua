@@ -21,7 +21,7 @@ return {
             ensure_installed = {
                 'lua_ls',
                 'tsserver',
-                'html-lsp',
+                'html',
                 'cssls',
                 'tailwindcss',
                 'jsonls',
